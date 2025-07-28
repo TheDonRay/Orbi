@@ -1,0 +1,21 @@
+{
+  "name": "orbi",
+  "version": "1.0.0",
+  "description": "<!-- # Orbi Orbi is your personal digital secretary, designed to help you stay organized and informed without the clutter. Each day, it delivers a concise email that combines:  Your tasks and priorities, broken down into a manageable daily agenda.  A quick news digest, summarizing the latest headlines so you can stay updated on the world in minutes.  Whether you’re busy juggling work or just want a clear start to your day, DailyBrief acts like a smart assistant — keeping you focused, productive, and in the know. -->",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheDonRay/Orbi.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/TheDonRay/Orbi/issues"
+  },
+  "homepage": "https://github.com/TheDonRay/Orbi#readme"
+}

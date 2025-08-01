@@ -1,8 +1,25 @@
 const express = require('express'); 
-const app = express(); // main express page  
-require('dotenv').config({ path: './env/.env.dev'});  
+const app = express(); // main express page    
+require('dotenv').config({ path: './env/.env.dev'});  // using this instead of a config folder much more simpler where i just input the path to my env file. 
 
-const PORT = process.env.PORT; 
+
+// adding sql stuff 
+const mysql = require('mysql'); 
+const bodyParser = require('body-parser'); // middleware used to parse incoming request bodies. 
+ 
+// used for allowing different domains to communicate with each other on the web, safely and with permission
+const cors = require('cors'); 
+
+// importing my routes here below: 
+const homepage = require('./routes/homepage.js'); 
+const userActivity = require('./routes/includeData.js'); 
+// use of middleware functions both built in and imported by npm 
+app.use(express.json()); 
+app.use(bodyParser.json());  
+
+// using cors 
+app.use(cors()); // used for handling different domains to be able to communicate with each other. 
+
 
 
 // simple get request here 
@@ -10,9 +27,15 @@ app.get('/', (req, res) => { // default slash always mean homepage
     res.send('Hello from the backend'); 
 })
 
-// jsut going to try out some random stuff here. Based of my learning on backend dev 
+// implementing the routes here dont forget they use the /
+app.use('/api/v1/home', homepage); 
+app.use('/api/v1/userActivity', userActivity); 
 
 
+
+
+// PORT definition here. 
+const PORT = process.env.PORT; 
 
 app.listen(PORT, (err) => {   
     if (err){ 

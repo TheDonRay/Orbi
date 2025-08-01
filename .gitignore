@@ -1,8 +1,14 @@
 # Node modules
 node_modules/
 
+
+
 # Environment variables
-.env
+.env 
+.env.smtp 
+.env.dev
+env/
+
 
 # Logs
 logs
@@ -21,3 +27,4 @@ build/
 .cache/
 
 # Optional: Coverage reports (if using Jest or similar
+coverage/

@@ -1,9 +1,11 @@
+/*Remember this file is responsible for handling email functionality in your Node.js project. 
+to run the node mail do node SMTPserver/mailer.js */
+
 // import the nodemailer library  
 // load the env variables from the env file using the dotenv package.  
-
-require('dotenv').config(); 
+require('dotenv').config({path : './env/.env.smtp'}); // remember we need to define where that env file is. 
 const nodemailer = require('nodemailer');  
-const users = process.env.USERS.split(',');
+//const users = process.env.USERS.split(',');
 
 // create the transporter object 
 const transporter = nodemailer.createTransport({
@@ -19,7 +21,6 @@ const transporter = nodemailer.createTransport({
 const mailOptions = { // yes this is an object 
     from: process.env.GMAIL_USER, 
     to: 'rayatchowdhury2005@gmail.com', 
-    bcc: users, 
     subject: 'No More Inbox Overload — Just Orbi.',
     html: 
     `<div style="

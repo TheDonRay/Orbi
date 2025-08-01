@@ -1,7 +1,8 @@
 const express = require('express'); 
-const app = express(); // main express page 
+const app = express(); // main express page  
+require('dotenv').config({ path: './env/.env.dev'});  
 
-const PORT = 5050; 
+const PORT = process.env.PORT; 
 
 
 // simple get request here 
@@ -13,6 +14,10 @@ app.get('/', (req, res) => { // default slash always mean homepage
 
 
 
-app.listen(PORT, () => { 
-    console.log(`Server running on local URL: http://localhost:${PORT}`); 
+app.listen(PORT, (err) => {   
+    if (err){ 
+        console.log('Error running Server', err); 
+    }else {
+    console.log(`Server running on local URL: http://localhost:${PORT}`);  
+    }
 })

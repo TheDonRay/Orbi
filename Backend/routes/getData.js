@@ -1,10 +1,10 @@
 const express = require('express'); 
-const includedata = express.Router();  
+const getdata = express.Router();  
 
 
-includedata.get('/getuserData', (req, res) => { 
+getdata.get('/getuserData', (req, res) => { 
     res.send('This route gets the userdata its where the database is going to be setup'); 
 }) 
 
 
-module.exports = includedata; 
+module.exports = getdata; 

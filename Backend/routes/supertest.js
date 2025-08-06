@@ -1,3 +1,5 @@
+// this route is for just learning how to do supertests and stuff and unit integration since this way of testing is called unit integration. 
+
 const express = require('express'); 
 const learningsupertest = express.Router();
 

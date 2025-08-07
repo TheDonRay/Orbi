@@ -8,7 +8,7 @@ node_modules/
 .env.smtp 
 .env.dev
 env/
-
+.env.database
 
 # Logs
 logs

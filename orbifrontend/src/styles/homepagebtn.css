@@ -1,0 +1,48 @@
+.homepage-container {
+    height: 30vh; /* Use 100vh to center on the full page height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}
+
+.home-page {
+    color: white;
+    text-align: center;
+}
+
+.button-container {
+    display: flex; /* Use flexbox to put buttons side-by-side */
+    gap: 1rem; /* Adjust space between buttons */
+    margin-top: 1rem; /* Adjust space between h1 and buttons */
+}
+
+.get-started-btn {
+    padding: 1rem 2rem;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.learnmore-btn {
+    padding: 1rem 2rem;
+    background-color: transparent; /* Or a darker color */
+    color: white;
+    border: 1px solid white; /* A white border */
+    border-radius: 50px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.get-started-btn:hover {
+    background-color: #f0f0f0;
+}
+
+.learnmore-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}

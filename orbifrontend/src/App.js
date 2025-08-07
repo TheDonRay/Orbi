@@ -7,7 +7,8 @@ import DarkVeil from './DarkVeil.jsx';
 import HomePage from './Homepage.jsx';
 import AboutPage from './Aboutpage.jsx';
 import Navbar from './Navbar.jsx'; 
-import Getstarted from './Getstarted.jsx';
+import Getstarted from './Getstarted.jsx'; 
+import Learnmore from './Learnmore.jsx';
 
 function App() {
   return ( 
@@ -20,7 +21,8 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />  
-            <Route path="/getstarted" element={<Getstarted />} /> 
+            <Route path="/getstarted" element={<Getstarted />} />  
+            <Route path = "/learnmore" element ={<Learnmore />} />
           </Routes>
         </Router>
       </div>

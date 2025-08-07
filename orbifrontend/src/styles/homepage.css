@@ -1,6 +1,6 @@
 .homepage-container {
     /* Takes up the full available screen height */
-    height: 20vh; 
+    height: 15vh; 
     
     /* Enables Flexbox */
     display: flex;

@@ -1,6 +1,13 @@
 // this is the Navbar here 
 import React from 'react';
-import './styles/Navbar.css'; // Don't forget to import the CSS file
+import './styles/Navbar.css'; // Don't forget to import the CSS file 
+
+
+// create two buttons one about the Learn More the other about get started   
+// button 1
+function getStarted() {  
+    
+}
 
 function Navbar() {
   return (

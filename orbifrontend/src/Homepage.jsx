@@ -3,10 +3,6 @@
 import './styles/homepage.css' 
 import { useNavigate } from "react-router";
 
-// create two buttons 
-// create two buttons one about the Learn More the other about get started   
-// button 1
-
 
 function HomePage() {   
     // initialize the useNavigate hook 
@@ -19,7 +15,7 @@ function HomePage() {
     ); 
 
     function getStarted() {  
-        navigate('/getStarted')
+        navigate('/getstarted'); 
     } 
 }  
 

@@ -1,20 +1,29 @@
-import React from 'react'; 
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; 
-
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import './styles/App.css';
 
 // import the pages stuff here 
-const HomePage = require('./pages/homepage.jsx'); 
-const AboutPage = require('./pages/aboutpage.jsx'); 
+import DarkVeil from './DarkVeil.jsx';
+import HomePage from './Homepage.jsx';
+import AboutPage from './Aboutpage.jsx';
+import Navbar from './Navbar.jsx';
 
 function App() {
-  return (  
-    <Router>
-      <Routes> 
-        <Route exact path = "/home" element={<HomePage />} /> 
-        <Route exact path = "/about" element={<AboutPage />} />
-      </Routes>
-    </Router>
-  )
+  return ( 
+    <div className="app-container">
+      <DarkVeil />
+      <div className="content">
+        <Router>
+          {/* Place the Navbar here, outside of Routes */}
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/about" element={<AboutPage />} />
+          </Routes>
+        </Router>
+      </div>
+    </div>
+  );
 }
 
 export default App;

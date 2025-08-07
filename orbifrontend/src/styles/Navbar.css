@@ -1,0 +1,63 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  /* Positioning and Sizing */
+  margin-top: 3.2rem; /* Adds space from the top */
+  margin-left: auto;
+  margin-right: auto; /* Centers the navbar horizontally */
+  width: 65%; /* Makes the navbar shorter in length */
+  
+  /* Conflicting rule removed. Use margin or a single padding rule. */
+  /* padding-top: 4rem; */ 
+  padding: 1rem 2.5rem; 
+  
+  /* Glassmorphism Effect */
+  background-color: rgba(255, 255, 255, 0.1); 
+  border-radius:40px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2); 
+  color: white; 
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Space between logo and text */
+} 
+
+.rounded-logo {
+  border-radius: 48%; /* This will make it a perfect circle */
+  /* Or */
+  border-radius: 15px; /* This will give it rounded corners */
+}
+
+/*this is for the orbi logo*/
+.logo-container img { 
+  height: 38px; /* Adjust logo size */
+} 
+
+
+
+
+.nav-links {
+  display: flex;
+  list-style: none; /* Removes bullet points */
+  gap: 36px; /* Space between links */
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: white; 
+  font-weight: 400;
+  text-decoration: none; /* Removes underline from links */
+  font-size: 1.1rem;
+  transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+.nav-links a:hover {
+  color:#0724a6; /* Slightly change color on hover */
+}

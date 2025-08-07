@@ -1,0 +1,17 @@
+.homepage-container {
+    /* Takes up the full available screen height */
+    height: 20vh; 
+    
+    /* Enables Flexbox */
+    display: flex;
+    
+    /* Centers children horizontally */
+    justify-content: center;
+    
+    /* Centers children vertically */
+    align-items: center;
+}
+
+.home-page { 
+    color: white; 
+}

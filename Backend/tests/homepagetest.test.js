@@ -10,6 +10,6 @@ describe('Testing the home Route but later working on learning how to test put, 
             .expect("Content-Type", /json/) 
             .expect(200) 
             // here the .text is the key name
-        expect(result.body.keyname).toBe('This is the Homepage'); 
-    }); 
+        expect(result.body).toEqual({keyname: 'This is the Homepage'}); 
+    }); // keyname is the key and after the toBe matcher u need to put in the value of that key which is usually in quotes. 
 }); 

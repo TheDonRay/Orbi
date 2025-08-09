@@ -31,7 +31,8 @@
 .rounded-logo {
   border-radius: 48%; /* This will make it a perfect circle */
   /* Or */
-  border-radius: 15px; /* This will give it rounded corners */
+  border-radius: 15px; /* This will give it rounded corners */ 
+  background-color: transparent;
 }
 
 /*this is for the orbi logo*/

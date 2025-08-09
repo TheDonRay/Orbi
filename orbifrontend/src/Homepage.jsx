@@ -2,14 +2,32 @@
 // will import some backend data etc. 
 import './styles/homepage.css' 
 import { useNavigate } from "react-router"; 
-import './styles/homepagebtn.css'
+import './styles/homepagebtn.css'  
+import React, { useState, useEffect } from 'react';
 
 
 
 function HomePage() {   
     // initialize the useNavigate hook 
     const navigate = useNavigate();  
-
+    const [data, setData] = useState(null); // right now this is assigned to not be null 
+    
+    useEffect (() => { 
+        const fetchdata = async () => { // this is our function which is asynchrnous
+            try { 
+                const response = await fetch('http://localhost:8000/api/v1/home'); 
+                const result = await response.json();   
+                console.log(result); 
+                setData(result);  
+                
+            } 
+            catch (error) { 
+                console.error('Error Retrieving Data', error); 
+            }
+        }; 
+        // invoke the function as such 
+        fetchdata(); 
+    }, []);
     // The function that handles the navigation
     function getStarted() {  
         navigate('/getstarted'); 
@@ -26,7 +44,7 @@ function HomePage() {  
             {/* New container for the buttons */}
             <div className="button-container">
                 <button className="get-started-btn" onClick={getStarted}>
-                    Get Started
+                    {data ? data.btntitle: "Loading..."}
                 </button> 
                 <button className="learnmore-btn" onClick={learnMore}>
                     Learn More

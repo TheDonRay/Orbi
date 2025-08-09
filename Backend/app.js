@@ -6,7 +6,7 @@ require('dotenv').config({ path: './env/.env.dev'});  // using this instead of a
 // adding sql stuff 
 const mysql = require('mysql'); // added it here
 const bodyParser = require('body-parser'); // middleware used to parse incoming request bodies. 
-
+require('./scripts/initDb.js'); 
 // used for allowing different domains to communicate with each other on the web, safely and with permission
 const cors = require('cors'); 
 

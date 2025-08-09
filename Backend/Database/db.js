@@ -17,15 +17,16 @@ const pool = mysql.createPool({
 function TestConnection() { 
     try {   
         pool.getConnection((err, connection) => {
-        if (err) { 
-            console.error('Error connecting to the Database', err.stack); 
-        } 
-        console.log('Connection was successful!', connection.threadId); 
+            if (err) { 
+                console.error('Error connecting to the Database', err.stack);  
+                return; // helps me return early error
+            } 
+            console.log('Connection was successful!', connection.threadId); 
         connection.release(); 
     }); 
         } 
-        catch (err) { 
-            console.err('Unexpected error', err); 
+        catch (error) { 
+            console.error('Unexpected error', error); 
         }
 }; 
 // invoke the function as such: 

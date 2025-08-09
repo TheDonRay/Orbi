@@ -3,7 +3,7 @@ const homepage = express.Router();
 
 
 homepage.get('/', (req, res) => { 
-    res.json({keyname: 'This is the Homepage'});      
+    res.json({btntitle: "Get Started"});      
 }); 
 
 module.exports = homepage; 

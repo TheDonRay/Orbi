@@ -47,7 +47,7 @@ function HomePage() {  
                     {data ? data.btntitle: "Loading..."}
                 </button> 
                 <button className="learnmore-btn" onClick={learnMore}>
-                    Learn More
+                    {data ? data.secondbtntitle: "Loading..."}
                 </button>
             </div>
         </div>

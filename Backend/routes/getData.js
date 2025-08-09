@@ -3,7 +3,8 @@ const getdata = express.Router();
 
 
 // this may be a asynchronous route with a promise. 
-getdata.get('/getuserData', (req, res) => { 
+getdata.get('/getuserData', (req, res) => {   
+    // start querying here. 
     res.send("This route gets the userdata its where the database is going to be querying");  
 })  
 

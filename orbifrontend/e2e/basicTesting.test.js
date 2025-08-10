@@ -9,8 +9,12 @@ describe('Learning about writing tests in playwright', () => {
 
   // Test 1: Verifies the homepage's title.
   test('going to test if the website has the title', async ({ page }) => {
-    await expect(page).toHaveTitle(/O R B I/i); 
-    await expect(page).toHaveURL('http://localhost:3000/');  
+    await expect(page).toHaveTitle(/O R B I/i);  
+
+    const getpageUrl = page.url(); // this gets the page url we are at.
+    console.log('Page URL is the following: ', getpageUrl);  
+
+    await expect(page).toHaveURL('http://localhost:3000/');  // we expect the assertion to have this URL. 
 
     await page.close(); // this will close the page 
   });

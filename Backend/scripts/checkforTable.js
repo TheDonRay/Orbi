@@ -1,5 +1,5 @@
 
-const dbpool = require('../Database/db.js') 
+const dbpool = require('../Database/db.js'); 
 
 dbpool.query("SHOW TABLES LIKE 'users'", (err, results) => { 
     if (err) { 

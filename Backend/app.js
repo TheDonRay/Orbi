@@ -17,7 +17,7 @@ const test = require('./routes/supertest.js');
 
 // use of middleware functions both built in and imported by npm 
 app.use(express.json()); 
-app.use(bodyParser.json());   
+app.use(bodyParser.json()); // keep in mind that we only need one json parser since it can cause race conflicts. 
 
 
 // using cors 

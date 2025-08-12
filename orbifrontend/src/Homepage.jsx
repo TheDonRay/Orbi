@@ -48,7 +48,12 @@ function HomePage() {  
                 </button> 
                 <button className="learnmore-btn" onClick={learnMore}>
                     {data ? data.secondbtntitle: "Loading..."}
-                </button>
+                </button> 
+            </div> 
+
+            {/*Card stuff here*/} 
+            <div className='transparent-card'> 
+                <h2></h2>
             </div>
         </div>
     ); 

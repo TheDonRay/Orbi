@@ -1,0 +1,17 @@
+/* Card.css */
+.card-container {
+  /* Position the card on the left side of the viewport */
+  position: fixed;
+  left: 20px; /* Adjust this value to move it closer or further from the left edge */
+  top: 30%; /* Center the card vertically */
+  transform: translateY(-50%);
+
+  /* Style the card itself */
+  width: 350px; /* Adjust width as needed */
+  padding: 10px;
+  background-color: transparent;
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1); /* Soft shadow */
+  font-family: sans-serif;
+  color: white
+}

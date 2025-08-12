@@ -5,9 +5,15 @@
     /* border: 1px solid blue; */
     margin-top: 2.5rem;
     max-width: 530px;
-    color: white; /* assuming dark background */
+    color: white; /* assuming dark background */ 
     box-shadow: transparent;
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 } 
+ 
 
+
+.text{ 
+    line-height: 1.5; 
+    font-weight: 600; 
+}

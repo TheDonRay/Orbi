@@ -6,7 +6,10 @@ homepage.get('/', (req, res) => { // note another thing u need to realize is tha
     res.json({
         btntitle: "Get Started",     
         secondbtntitle: "Learn More", 
-        cardData: "Orbi wasn't just an idea I thought of from the rip of my mind it was something I found annoying every morning that I woke up to either go to work, school, or even my day to day life."
+        cardData: `Orbi tackles the daily email overload millions face by cutting 
+        through clutter to deliver your key tasks, updates, and info in one clear, 
+        concise email. Designed to save time and boost productivity, Orbi helps you 
+        focus on what matters most—transforming inbox chaos into streamlined efficiency`
     });   
 }); 
 

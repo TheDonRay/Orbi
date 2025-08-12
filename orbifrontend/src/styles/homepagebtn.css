@@ -1,9 +1,10 @@
 .homepage-container {
-    height: 30vh; /* Use 100vh to center on the full page height */
+    height: 49vh; /* Use 100vh to center on the full page height */
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; 
+    align-items: center;  
+    text-align: center; 
 }
 
 .home-page {
@@ -14,7 +15,7 @@
 .button-container {
     display: flex; /* Use flexbox to put buttons side-by-side */
     gap: 1rem; /* Adjust space between buttons */
-    margin-top: 1rem; /* Adjust space between h1 and buttons */
+    margin-top: 2.3rem; /* Adjust space between h1 and buttons */
 }
 
 .get-started-btn {

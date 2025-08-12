@@ -3,7 +3,8 @@
 import './styles/homepage.css' 
 import { useNavigate } from "react-router"; 
 import './styles/homepagebtn.css'  
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react'; 
+import './styles/cardhomepage.css'; 
 
 
 
@@ -53,7 +54,8 @@ function HomePage() {  
 
             {/*Card stuff here*/} 
             <div className='transparent-card'> 
-                <h2></h2>
+                <h2>From Idea to Orbit — Orbi’s Beginning</h2> 
+                <p className = "text">{data ? data.cardData : "Loading..."}</p>
             </div>
         </div>
     ); 

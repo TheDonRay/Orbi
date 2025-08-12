@@ -1,0 +1,13 @@
+.transparent-card{ 
+    background-color: transparent; /* semi-transparent white */
+    backdrop-filter: blur(8px); /* nice glassy blur effect */
+    border-radius: 16px;  
+    /* border: 1px solid blue; */
+    margin-top: 2.5rem;
+    max-width: 530px;
+    color: white; /* assuming dark background */
+    box-shadow: transparent;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+} 
+

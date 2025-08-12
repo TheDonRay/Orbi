@@ -54,7 +54,7 @@ function HomePage() {  
 
             {/*Card stuff here*/} 
             <div className='transparent-card'> 
-                <h2>From Idea to Orbit — Orbi’s Beginning</h2> 
+                <h2 className = 'heading'>From Idea to Orbit — Orbi’s Beginning</h2> 
                 <p className = "text">{data ? data.cardData : "Loading..."}</p>
             </div>
         </div>

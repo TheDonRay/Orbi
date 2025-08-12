@@ -11,9 +11,14 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 } 
  
+.heading{ 
+    font-weight: 700;
+    font-size: 26px; 
+}
 
 
 .text{ 
-    line-height: 1.5; 
-    font-weight: 600; 
+    line-height: 1.6; 
+    font-weight: 600;  
+    font-size: 15px;
 }

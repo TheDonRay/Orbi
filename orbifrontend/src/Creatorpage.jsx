@@ -1,6 +1,13 @@
+import React from "react"; 
+import ProfileCard from "./ProfileCard.jsx"; 
+
+
+
 function creatorpage() { 
     return (
-        <h1>this is the creator page</h1>
+        <div className="about-creator-container">
+            <h1>Creator Page so a page about me</h1>
+        </div>
     ); 
 }; 
 

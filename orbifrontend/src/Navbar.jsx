@@ -11,7 +11,8 @@ function Navbar() {
       </div>
       <ul className="nav-links">
         <li><a href="/">Home</a></li>
-        <li><a href="/about">About</a></li>
+        <li><a href="/about">About</a></li> 
+        <li><a href = "/Creator">Creator</a></li>
       </ul>
     </nav>
   );

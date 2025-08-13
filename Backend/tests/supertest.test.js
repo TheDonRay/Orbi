@@ -28,4 +28,6 @@ const app = require("../app.js");
 /* here im going to try out some PUT POST AND PATCH requests to help me understand how the requests and stuff work.  */
 // describe('practicing with Post Put Patch requests made to the route endpoint', () => { 
     
-// })
+// }) 
+
+// here going to learn about how to actually test in depth of these routes. 

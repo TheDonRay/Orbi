@@ -9,7 +9,7 @@ describe('Testing the home Route but later working on learning how to test put, 
             .get('/api/v1/home') 
             .expect("Content-Type", /json/) 
             .expect(200) 
-            // here the .text is the key name
+            // here the .text ist the key name
         expect(result.body.btntitle).toBe('Get Started'); 
-    }); // keyname is the key and after the toBe matcher u need to put in the value of that key which is usually in quotes. 
+    }); // keyname is the key and after the toBe matcher u need o put in the value of that key which is usually in quotes. 
 }); 

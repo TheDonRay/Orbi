@@ -16,6 +16,10 @@ const userActivity = require('./routes/getData.js');
 const test = require('./routes/supertest.js');  
  
 // from Database 
+const CreateTable = require('./Database/CreateTables.js'); // remember the db.connection is already imported in the createTable.js file so i dont need to import the connection file. 
+// TO RUN:  we need to invoke the createTable function below:  
+CreateTable(); // here we invoked the function 
+
 
 
 // use of middleware functions both built in and imported by npm 

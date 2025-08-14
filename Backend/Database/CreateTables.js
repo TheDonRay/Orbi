@@ -1,4 +1,4 @@
-const dbConnection = require('./dbconnection.js'); 
+const dbConnection = require('./dbconnection'); 
 
 // create a table as such 
 const createUserTable = `  

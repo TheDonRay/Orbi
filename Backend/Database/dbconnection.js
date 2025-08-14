@@ -15,19 +15,14 @@ const pool = mysql.createPool({
 
 // wrap in a function as such to handle the try and catch something like this 
 function TestConnection() { 
-    try {   
-        pool.getConnection((err, connection) => {
-            if (err) { 
-                console.error('Error connecting to the Database', err.stack);  
-                return; // helps me return early error
-            } 
-            console.log('Connection was successful!', connection.threadId); 
+    pool.getConnection((err, connection) => {
+        if (err) { 
+            console.error('Error connecting to the Database', err.stack);  
+            return; // helps me return early error
+        } 
+        console.log('Connection was successful!', connection.threadId); 
         connection.release(); 
     }); 
-        } 
-        catch (error) { 
-            console.error('Unexpected error', error); 
-        }
 }; 
 // invoke the function as such: 
 TestConnection();  

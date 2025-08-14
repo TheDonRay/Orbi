@@ -18,7 +18,7 @@ const createTables = `
 function createTable() {  
       // instead we should follow mysql NOT SQLITE what i was doing before 
       // instead we use pool.execute 
-      pool.execute(createTables, (err, results) => { 
+      dbConnection.execute(createTables, (err, results) => { 
         if (err) { 
             console.error('Error creating tables', err.message); 
         } else { 

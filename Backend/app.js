@@ -4,7 +4,9 @@ require('dotenv').config({ path: './env/.env.dev'});  // using this instead of a
 
 
 // adding sql stuff 
-const mysql = require('mysql'); // added it here
+const mysql = require('mysql'); // added it here 
+// // can also write it like this in es6
+// import mysql from 'mysql'; 
 const bodyParser = require('body-parser'); // middleware used to parse incoming request bodies. 
 // require('./scripts/checkforTable.js');  // if i uncomment this it runs everytime I start the server (app.js) in production comment this out. 
 // used for allowing different domains to communicate with each other on the web, safely and with permission

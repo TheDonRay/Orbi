@@ -2,6 +2,10 @@ const express = require('express');
 const getdata = express.Router();   
 const connection = require('../Database/dbconnection'); 
 
+//TODO change to regular call back function 
+//TODO implement the get route just to get the users in console.log to see if it will work.
+
+
 // route to create new user
 getdata.post('/userdata', (req, res) => {
     const { email } = req.body;

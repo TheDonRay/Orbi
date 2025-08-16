@@ -3,7 +3,8 @@ const dbConnection = require('./dbconnection');
 // create a table as such 
 const createUsersTable = `
     CREATE TABLE IF NOT EXISTS users (
-        id INT AUTO_INCREMENT PRIMARY KEY,
+        id INT AUTO_INCREMENT PRIMARY KEY, 
+        name VARCHAR(255), 
         email VARCHAR(255) UNIQUE NOT NULL
     );
 `;

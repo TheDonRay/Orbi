@@ -14,7 +14,7 @@ const cors = require('cors');
 
 // importing my routes here below: 
 const homepage = require('./routes/homepage.js'); 
-const userActivity = require('./routes/getData.js');  
+const userInfo = require('./routes/getUserInfo.js');  
 const test = require('./routes/supertest.js');  
  
 // from Database 
@@ -41,7 +41,7 @@ app.get('/', (req, res) => { // default slash always mean homepage
 
 // implementing the routes here dont forget they use the / here they are mounted here. 
 app.use('/api/v1/home', homepage); 
-app.use('/api/v1/userActivity', userActivity); 
+app.use('/api/v1/user', userInfo); 
 app.use('/api/v1/', test); 
 
 

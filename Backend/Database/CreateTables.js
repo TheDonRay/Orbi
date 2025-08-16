@@ -26,4 +26,4 @@ async function CreateTables() {
         console.error('Error creating databases', err.message); 
     }
 }
-module.exports = createTable; // exported this because we need to call this create table upon server running. 
+module.exports = CreateTables; // exported this because we need to call this create table upon server running. 

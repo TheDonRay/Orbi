@@ -2,7 +2,7 @@
 // import the dotenv stuff as such 
 require('dotenv').config({ path: './env/.env.database' }); 
 
-const mysql = require('mysql2'); 
+const mysql = require('mysql2/promise'); 
 
 // note that im going to change it to a pool it will help with the connection 
 const pool = mysql.createPool({ 

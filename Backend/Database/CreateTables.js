@@ -8,6 +8,7 @@ const createUsersTable = `
     );
 `;
 
+// if you are wondering the auto  increment allows us to 
 const createTasksTable = `
     CREATE TABLE IF NOT EXISTS tasks (
         id INT AUTO_INCREMENT PRIMARY KEY,

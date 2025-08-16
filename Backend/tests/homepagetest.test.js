@@ -21,7 +21,4 @@ describe('Testing the home Route but later working on learning how to test put, 
             .expect(200) 
         expect(result.body.secondbtntitle).toBe('Learn More'); 
     });  
-
-    // one more test for the property value test here 
-    
 }); 

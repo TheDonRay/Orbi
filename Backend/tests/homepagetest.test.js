@@ -11,5 +11,17 @@ describe('Testing the home Route but later working on learning how to test put, 
             .expect(200) 
             // here the .text ist the key name
         expect(result.body.btntitle).toBe('Get Started'); 
-    }); // keyname is the key and after the toBe matcher u need o put in the value of that key which is usually in quotes. 
+    }); // keyname is the key and after the toBe matcher u need o put in the value of that key which is usually in quotes.  
+
+    // test the other property values in the object 
+    test('second object property value', async() => { 
+        const result = await request(app) // requests the server here 
+            .get('/api/v1/home') 
+            .expect("Content-Type", /json/)
+            .expect(200) 
+        expect(result.body.secondbtntitle).toBe('Learn More'); 
+    });  
+
+    // one more test for the property value test here 
+    
 }); 

@@ -7,7 +7,7 @@ require('dotenv').config({ path: './env/.env.dev'});  // using this instead of a
 const mysql = require('mysql'); // added it here 
 // // can also write it like this in es6
 // import mysql from 'mysql'; 
-const bodyParser = require('body-parser'); // middleware used to parse incoming request bodies. 
+//const bodyParser = require('body-parser'); // middleware used to parse incoming request bodies. 
 // require('./scripts/checkforTable.js');  // if i uncomment this it runs everytime I start the server (app.js) in production comment this out. 
 // used for allowing different domains to communicate with each other on the web, safely and with permission
 const cors = require('cors'); 
@@ -26,7 +26,7 @@ CreateTable(); // here we invoked the function
 
 // use of middleware functions both built in and imported by npm 
 app.use(express.json()); 
-app.use(bodyParser.json()); // keep in mind that we only need one json parser since it can cause race conflicts. 
+//app.use(bodyParser.json()); // keep in mind that we only need one json parser since it can cause race conflicts. 
 
 
 // using cors 

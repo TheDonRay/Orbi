@@ -21,8 +21,11 @@ const createTasksTable = `
 // now we need to connect to the SQllite database and execute the create table query 
 async function CreateTables() { 
     try { 
-        await dbConnection.execute(createUsersTable); 
-        await dbConnection.execute(createTasksTable);  
+        await dbConnection.execute(createUsersTable);  
+        // add console log just to make sure of certain things 
+        console.log("Users table ensured (schema won't update if it already existed)."); 
+        await dbConnection.execute(createTasksTable);   
+          console.log("Tasks table ensured (schema won't update if it already existed)."); 
         console.log('Successfully created databases'); 
     } catch (err) { 
         console.error('Error creating databases', err.message); 

@@ -2,7 +2,7 @@
 // import the dotenv stuff as such 
 require('dotenv').config({ path: './env/.env.database' }); 
 
-const mysql = require('mysql2/promise'); 
+const mysql = require('mysql2/promise'); // rtmember since you are using the promise version it is supposed to return a promise not your traditional callback. 
 
 // note that im going to change it to a pool it will help with the connection 
 const pool = mysql.createPool({ 

@@ -28,17 +28,7 @@ getdata.post('/userdata', async (req, res) => {
     }
 });
 
-
-// create another endpoint here to get the data from the sql database 
-// getdata.get('/fetchdata', (req, res) => { 
-//     // start the destructuring  
-//     const { name, email } = req.body;    
-
-//     // first check for null values 
-//     if ()
-//     const fetchQuery = 'SELECT * FROM users'; 
-
-
-// })
+//TODO create get request to retrieve the data here and console.log it below. 
+// create a get request for the retrieval of all the data. 
 
 module.exports = getdata;

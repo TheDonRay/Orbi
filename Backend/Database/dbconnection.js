@@ -13,16 +13,16 @@ const pool = mysql.createPool({
     database: 'orbidb'
 });  
 
-// wrap in a function as such to handle the try and catch something like this 
-function TestConnection() { 
-    pool.getConnection((err, connection) => {
-        if (err) { 
-            console.error('Error connecting to the Database', err.stack);  
-            return; // helps me return early error
-        } 
-        console.log('Connection was successful!', connection.threadId); 
+// wrap in a function as such to handle the async/await promise since we are suing mysql2/promise 
+
+async function TestConnection() {  
+    try {  
+        const connection = await pool.getConnection(); 
+        console.log('Connection was Successful'); 
         connection.release(); 
-    }); 
+    } catch (err) { 
+        console.error('Error Connecting to the database', err.stack); 
+    } 
 }; 
 // invoke the function as such: 
 TestConnection();  

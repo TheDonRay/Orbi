@@ -1,4 +1,4 @@
-const dbConnection = require('./dbconnection'); 
+const dbConnection = require('./dbconnection'); // call the connection file here 
 
 // create a table as such 
 const createUsersTable = `

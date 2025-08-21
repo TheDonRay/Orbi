@@ -15,12 +15,13 @@ const cors = require('cors');
 // importing my routes here below: 
 const homepage = require('./routes/homepage.js'); 
 const userInfo = require('./routes/getUserInfo.js');  
-const test = require('./routes/supertest.js');  
+const test = require('./routes/supertest.js');   
+const retrieveUsers = require('./routes/getUserInfo.js'); 
  
 // from Database 
 const CreateTable = require('./Database/CreateTables.js'); // remember the db.connection is already imported in the createTable.js file so i dont need to import the connection file. 
 // TO RUN:  we need to invoke the createTable function below:  
-CreateTable(); // here we invoked the function 
+CreateTable(); // here we invoked the function to run the script. 
 
 
 
@@ -42,7 +43,8 @@ app.get('/', (req, res) => { // default slash always mean homepage
 // implementing the routes here dont forget they use the / here they are mounted here. 
 app.use('/api/v1/home', homepage); 
 app.use('/api/v1/user', userInfo); 
-app.use('/api/v1/', test); 
+app.use('/api/v1/', test);  
+app.use('/api/v1/', retrieveUsers); 
 
 
 

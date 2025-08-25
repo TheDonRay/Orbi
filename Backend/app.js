@@ -16,7 +16,7 @@ const cors = require('cors');
 const homepage = require('./routes/homepage.js'); 
 const userInfo = require('./routes/getUserInfo.js');  
 const test = require('./routes/supertest.js');   
-const retrieveUsers = require('./routes/getUserInfo.js'); 
+// const retrieveUsers = require('./routes/getUserInfo.js'); 
  
 // from Database 
 const CreateTable = require('./Database/CreateTables.js'); // remember the db.connection is already imported in the createTable.js file so i dont need to import the connection file. 
@@ -44,7 +44,7 @@ app.get('/', (req, res) => { // default slash always mean homepage
 app.use('/api/v1/home', homepage); 
 app.use('/api/v1/user', userInfo); 
 app.use('/api/v1/', test);  
-app.use('/api/v1/', retrieveUsers); 
+// app.use('/api/v1/', retrieveUsers); this was for the get route to see if i can get all the data from the route. 
 
 
 

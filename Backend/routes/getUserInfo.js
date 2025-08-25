@@ -1,13 +1,11 @@
 const express = require('express'); 
-const getdata = express.Router();   
+const userdata = express.Router();   
 const connection = require('../Database/dbconnection'); 
 
 
-//TODO implement the get route just to get the users in console.log to see if it will work.
-
 
 // route to create new user
-getdata.post('/userdata', async (req, res) => {
+userdata.post('/userdata', async (req, res) => {
     // implement the old way where i start of with traditional callback here 
     const { name, email } = req.body;   
 
@@ -29,23 +27,23 @@ getdata.post('/userdata', async (req, res) => {
 });
 
 
-// create a get request for the retrieval of all the data.  
-getdata.get('/getuserdata', async (req, res) => { 
-    // i think i dont need this because its trying to get json data when its supposed to be retrieving from the database 
-    // const { name, email } = req.body; 
-    // if (!name || !email){ 
-    //     return res.status(404).send('Error no response for either email or name');  
-    // } 
-    const myQuery = 'SELECT * FROM users'; 
+// // create a get request for the retrieval of all the data.  
+// userdata.get('/getuserdata', async (req, res) => { 
+//     // i think i dont need this because its trying to get json data when its supposed to be retrieving from the database 
+//     // const { name, email } = req.body; 
+//     // if (!name || !email){ 
+//     //     return res.status(404).send('Error no response for either email or name');  
+//     // } 
+//     const myQuery = 'SELECT * FROM users'; 
 
-    try { 
-        const [rows, fields] = await connection.query(myQuery); 
-        console.log('All users are the following: ', rows); 
-        res.status(200).send(rows); 
-    } catch (error) { 
-        console.error('Error getting all users from database'); 
-        res.status(500).send('database Error'); 
-    }
-}); 
+//     try { 
+//         const [rows, fields] = await connection.query(myQuery); 
+//         console.log('All users are the following: ', rows); 
+//         res.status(200).send(rows); 
+//     } catch (error) { 
+//         console.error('Error getting all users from database'); 
+//         res.status(500).send('database Error'); 
+//     }
+// }); 
 
-module.exports = getdata;
+module.exports = userdata;

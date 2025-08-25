@@ -3,7 +3,7 @@ const userTasks = express.Router();
 
 
 userTasks.get('/usertasks', (req, res) => { 
-    res.send('route being set up'); 
+    res.json({output: 'route runs'}); 
 }); 
 
 

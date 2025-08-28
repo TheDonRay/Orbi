@@ -28,22 +28,22 @@ userdata.post('/userdata', async (req, res) => {
 
 
 // // create a get request for the retrieval of all the data.  
-// userdata.get('/getuserdata', async (req, res) => { 
-//     // i think i dont need this because its trying to get json data when its supposed to be retrieving from the database 
-//     // const { name, email } = req.body; 
-//     // if (!name || !email){ 
-//     //     return res.status(404).send('Error no response for either email or name');  
-//     // } 
-//     const myQuery = 'SELECT * FROM users'; 
+userdata.get('/getuserdata', async (req, res) => { 
+    // i think i dont need this because its trying to get json data when its supposed to be retrieving from the database 
+    // const { name, email } = req.body; 
+    // if (!name || !email){ 
+    //     return res.status(404).send('Error no response for either email or name');  
+    // } 
+    const myQuery = 'SELECT * FROM users'; 
 
-//     try { 
-//         const [rows, fields] = await connection.query(myQuery); 
-//         console.log('All users are the following: ', rows); 
-//         res.status(200).send(rows); 
-//     } catch (error) { 
-//         console.error('Error getting all users from database'); 
-//         res.status(500).send('database Error'); 
-//     }
-// }); 
+    try { 
+        const [rows, fields] = await connection.query(myQuery); 
+        console.log('All users are the following: ', rows); 
+        res.status(200).send(rows); 
+    } catch (error) { 
+        console.error('Error getting all users from database'); 
+        res.status(500).send('database Error'); 
+    }
+}); 
 
 module.exports = userdata;

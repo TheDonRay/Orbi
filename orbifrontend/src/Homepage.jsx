@@ -41,7 +41,7 @@ function HomePage() {  
 
     return(
         <div className="homepage-container">
-            <h1 className='home-page'>From deadlines to headlines — all in one <span className="highlight-email">Email.</span></h1> 
+            <h1 className='home-page'>From deadlines to headlines — all in <span className="highlight-email">one Email.</span></h1> 
             
             {/* New container for the buttons */}
             <div className="button-container">

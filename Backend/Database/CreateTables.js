@@ -25,7 +25,9 @@ async function CreateTables() {
         // add console log just to make sure of certain things 
         console.log("Users table ensured (schema won't update if it already existed)."); 
         await dbConnection.query(createTasksTable);   
-          console.log("Tasks table ensured (schema won't update if it already existed)."); 
+        console.log("Tasks table ensured (schema won't update if it already existed).");  
+
+        
         console.log('Successfully created databases'); 
     } catch (err) { 
         console.error('Error creating databases', err.message); 

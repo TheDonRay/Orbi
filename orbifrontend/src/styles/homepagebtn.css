@@ -1,5 +1,5 @@
 .homepage-container {
-    height: 28vh; /* Use 100vh to center on the full page height */
+    height: 50vh; /* Use 100vh to center on the full page height */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -48,7 +48,13 @@
     background-color: rgba(255, 255, 255, 0.1);
 } 
 
-.subtext{ 
+.highlight-email, .texthigh { 
+    color: rgb(74, 6, 163)
+}
+
+.subtext{  
+    font-weight: bolder;
     color: white;  
     margin-top: 1rem; 
-}
+} 
+

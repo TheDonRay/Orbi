@@ -28,7 +28,8 @@ function HomePage() {  
         }; 
         // invoke the function as such 
         fetchdata(); 
-    }, []);
+    }, []); 
+    
     // The function that handles the navigation
     function getStarted() { 
         navigate('/getstarted'); 
@@ -40,7 +41,7 @@ function HomePage() {  
 
     return(
         <div className="homepage-container">
-            <h1 className='home-page'>From deadlines to headlines — all in one email.</h1> 
+            <h1 className='home-page'>From deadlines to headlines — all in one <span className="highlight-email">Email.</span></h1> 
             
             {/* New container for the buttons */}
             <div className="button-container">
@@ -54,7 +55,7 @@ function HomePage() {  
 
             <div className= "subtext"> 
                 <h3>
-                    Stay in your own orbit—filter out the noise and focus on the emails that truly matter.
+                    Stay in your own orbit - <span className= "texthigh">O R B I</span> helps you filter out the noise and focus on the emails that truly matter.
                 </h3>
             </div>
         </div>

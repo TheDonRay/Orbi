@@ -1,5 +1,5 @@
 .homepage-container {
-    height: 50vh; /* Use 100vh to center on the full page height */
+    height: 28vh; /* Use 100vh to center on the full page height */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -15,7 +15,7 @@
 .button-container {
     display: flex; /* Use flexbox to put buttons side-by-side */
     gap: 1rem; /* Adjust space between buttons */
-    margin-top: 2.5rem; /* Adjust space between h1 and buttons */
+    margin-top: 15px; /* Adjust space between h1 and buttons */
 }
 
 .get-started-btn {
@@ -46,4 +46,9 @@
 
 .learnmore-btn:hover {
     background-color: rgba(255, 255, 255, 0.1);
+} 
+
+.subtext{ 
+    color: white;  
+    margin-top: 1rem; 
 }

@@ -30,7 +30,7 @@ function HomePage() {  
         fetchdata(); 
     }, []);
     // The function that handles the navigation
-    function getStarted() {  
+    function getStarted() { 
         navigate('/getstarted'); 
     }  
 
@@ -50,12 +50,12 @@ function HomePage() {  
                 <button className="learnmore-btn" onClick={learnMore}>
                     {data ? data.secondbtntitle: "Loading..."}
                 </button> 
-            </div> 
+            </div>   
 
-            {/*Card stuff here*/} 
-            <div className='transparent-card'> 
-                <h2 className = 'heading'>From Idea to Orbit — Orbi’s Beginning</h2> 
-                <p className = "text">{data ? data.cardData : "Loading..."}</p>
+            <div className= "subtext"> 
+                <h3>
+                    Stay in your own orbit—filter out the noise and focus on the emails that truly matter.
+                </h3>
             </div>
         </div>
     ); 

@@ -7,7 +7,7 @@
     align-items: center;    /* center horizontally */
     justify-content: center; /* optional: center vertically if container has height */
     gap: 20px; /* space between inputs and button */
-    margin-top: 33px; /* optional spacing from heading */
+    margin-top: 25px; /* optional spacing from heading */
 }
 
 /* Optional: style inputs and button */

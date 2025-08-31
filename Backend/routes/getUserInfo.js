@@ -27,6 +27,7 @@ userdata.post('/userdata', async (req, res) => {
 });
 
 
+// this basically checks that we have all the users here 
 // // create a get request for the retrieval of all the data.  
 userdata.get('/getuserdata', async (req, res) => { 
     // i think i dont need this because its trying to get json data when its supposed to be retrieving from the database 

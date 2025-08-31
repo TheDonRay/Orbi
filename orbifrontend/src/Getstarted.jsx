@@ -46,7 +46,7 @@ function Getstarted() {
             console.error('Error getting userinfo to backend', error);
         }
 
-        // in the end reset the form 
+        // in the end reset the states in the form 
         setName(""); 
         setEmail(""); 
     

@@ -20,5 +20,11 @@ describe('Testing the home Route but later working on learning how to test put, 
             .expect("Content-Type", /json/)
             .expect(200) 
         expect(result.body.secondbtntitle).toBe('Learn More'); 
-    });  
+    });   
+
+    // this is going to serve as the function to test the homepage stuff to make sure its good. 
+    // test('torewrite the second test in the code', () => { 
+    //     const result = function(); 
+    //     expect(result).toBe();  
+    // }) 
 }); 

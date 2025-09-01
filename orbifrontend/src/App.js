@@ -15,7 +15,7 @@ function App() {
     <div className="app-container">
       <Iridescence 
         className="iridescence-container"
-        color={[0.5, 0.7, 0.8]} // Updated color here
+        color={[0.2, 0.5, 1]} // Updated color here
         mouseReact={false}
         amplitude={0.1}
         speed={0.2}  

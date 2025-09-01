@@ -14,7 +14,7 @@
   padding: 1rem 2.5rem; 
   
   /* Glassmorphism Effect */
-  background-color: rgba(255, 255, 255, 0.1); 
+  background-color: transparent; 
   border-radius:40px;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -37,7 +37,7 @@
 
 /*this is for the orbi logo*/
 .logo-container img { 
-  height: 40px; /* Adjust logo size */
+  height: 48px; /* Adjust logo size */
 } 
 
 

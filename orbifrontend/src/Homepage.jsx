@@ -31,11 +31,11 @@ function HomePage() {  
     }, []); 
     
     // The function that handles the navigation
-    function getStarted() { 
+    function getStarted() { // For the buttons
         navigate('/getstarted'); 
     }  
 
-    function learnMore() { 
+    function learnMore() { // For the buttons
         navigate('/learnmore'); 
     }
 

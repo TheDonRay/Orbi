@@ -1,7 +1,7 @@
 import React from "react";  
 import { useState } from "react"; 
 import './styles/getstarted.css'
-
+import Card from './Card';
 
 function Getstarted() {   
 
@@ -54,14 +54,22 @@ function Getstarted() {
 
     //TODO add box containers to hold the date and time and also another container to hold the different tasks that user wants to add into it 
     return (  
-        <>
-            <h3 className="text">Enter your tasks, name, and email, and we’ll send you a daily plan at the time you choose.</h3>  
+        <>  
+        <div className='divstyle'>
+            <Card className="cardstyle">
+                <h3 className="text">Enter your <span className='namecolor'>Name</span> and <span className='emailcolor'>Email!</span></h3>
+                <form className="userentries" onSubmit={onSubmitfromUser}>
+                <input type="text" placeholder="Name" value={name} onChange={(e) => setName(e.target.value)} required />
+                <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required />
+                <button type="submit">Submit</button>
+                </form>
+            </Card>
+        </div> 
 
-            <form className="userentries" onSubmit={onSubmitfromUser}>  
-                <input type = "text" placeholder="Name" value={name} onChange={(e) => setName(e.target.value)} required /> {/*n this line we are saying once the event happens we set the value that the user wrote to the setName */} 
-                 <input type = "email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required />  
-                 <button type = "submit">Submit</button>
-            </form>
+        <div className="seconddivstyle">
+            
+        </div> 
+
         </>
     )
 } 

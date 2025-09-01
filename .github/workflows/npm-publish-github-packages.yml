@@ -26,7 +26,12 @@ jobs:
       #Run backend Tests 
       - name: Run tests 
         run: npm test 
-        working-directory: Backend
+        working-directory: Backend 
+        env: 
+          DB_HOST: ${{ secrets.DB_HOST }} 
+          DB_USER: ${{ secrets.DB_USER }}
+          DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+          
 
   publish-gpr:
     needs: build

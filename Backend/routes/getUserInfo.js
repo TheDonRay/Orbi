@@ -21,7 +21,6 @@ userdata.post('/userdata', async (req, res) => {
         console.log('Successfully inserted into the DataBase');  
         res.status(201).send({ id: result.insertId, name, email }); 
     } catch (error) { 
-        console.error('Database Error', err); 
         res.status(500).send('Database Error'); 
     }
 });

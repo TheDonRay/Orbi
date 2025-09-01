@@ -16,13 +16,13 @@ const cors = require('cors');
 const homepage = require('./routes/homepage.js'); 
 const userInfo = require('./routes/getUserInfo.js');   
 const userTasks = require('./routes/getTasks.js'); 
-const test = require('./routes/supertest.js');   
+  
 // const retrieveUsers = require('./routes/getUserInfo.js'); 
  
 // from Database 
-const CreateTable = require('./Database/CreateTables.js'); // remember the db.connection is already imported in the createTable.js file so i dont need to import the connection file. 
+const { CreateTables } = require('./Database/CreateTables.js'); // remember the db.connection is already imported in the createTable.js file so i dont need to import the connection file. 
 // TO RUN:  we need to invoke the createTable function below:  
-CreateTable(); // here we invoked the function to run the script. 
+CreateTables(); // here we invoked the function to run the script. 
 
 
 
@@ -43,22 +43,21 @@ app.get('/', (req, res) => { // default slash always mean homepage
 
 // implementing the routes here dont forget they use the / here they are mounted here. 
 app.use('/api/v1/home', homepage); 
-app.use('/api/v1/user', userInfo); 
-app.use('/api/v1/', test);   
+app.use('/api/v1/user', userInfo);  
 app.use('/api/v1/', userTasks); 
 // app.use('/api/v1/', retrieveUsers); this was for the get route to see if i can get all the data from the route. 
 
 
 
 // PORT definition here. 
-const PORT = process.env.PORT; 
+const PORT = process.env.PORT || 5000; 
 
 app.listen(PORT, (err) => {   
     if (err){ 
         console.log('Error running Server', err); 
     } 
     else {
-    console.log(`Server running on local URL: http://localhost:${PORT}`);  
+        console.log(`Server running on local URL: http://localhost:${PORT}`);  
     }
 }) 
 

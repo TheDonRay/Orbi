@@ -1,30 +1,20 @@
-// working on the homepage testing the route out. 
-const request = require('supertest');
+//testing the homepage route here  
+//TODO: test the homepage route ensuring that it works correctly.
+const request = require('supertest'); 
 const app = require('../app.js');  
 
-describe('Testing the home Route but later working on learning how to test put, post, patch requests', () => { 
-    test('if home route is sending correct response', async() => { 
-        // create your await promise  
+describe('writing test for the homepage route to make sure that data is shown', () => {
+    test('homepage route', async () => { 
         const result = await request(app) 
             .get('/api/v1/home') 
-            .expect("Content-Type", /json/) 
-            .expect(200) 
-            // here the .text ist the key name
-        expect(result.body.btntitle).toBe('Get Started'); 
-    }); // keyname is the key and after the toBe matcher u need o put in the value of that key which is usually in quotes.  
-
-    // test the other property values in the object 
-    test('second object property value', async() => { 
-        const result = await request(app) // requests the server here 
-            .get('/api/v1/home') 
             .expect("Content-Type", /json/)
-            .expect(200) 
-        expect(result.body.secondbtntitle).toBe('Learn More'); 
-    });   
+            .expect(200); 
 
-    // this is going to serve as the function to test the homepage stuff to make sure its good. 
-    // test('torewrite the second test in the code', () => { 
-    //     const result = function(); 
-    //     expect(result).toBe();  
-    // }) 
+        expect(result.body.btntitle).toBe('Your Inbox, In Orbit');  
+        expect(result.body.secondbtntitle).toBe('Learn More'); 
+        expect(result.body.cardData).toBe(`Orbi tackles the daily email overload millions face by cutting 
+        through clutter to deliver your key tasks, updates, and info in one clear, 
+        concise email. Designed to save time and boost productivity, Orbi helps you 
+        focus on what matters most—transforming inbox chaos into streamlined efficiency.`)
+    }); 
 }); 

@@ -7,7 +7,7 @@ const connection = require('../Database/dbconnection');
 // route to create new user
 userdata.post('/userdata', async (req, res) => {
     // implement the old way where i start of with traditional callback here 
-    const { name, email } = req.body;   
+    const { name, email } = req.body;  // we destructure here since json is coming in the body. 
 
     // want to do a check if there is nothing in the body 
     if (!name || !email){ 
@@ -27,7 +27,6 @@ userdata.post('/userdata', async (req, res) => {
 
 
 // this basically checks that we have all the users here 
-// // create a get request for the retrieval of all the data.  
 userdata.get('/getuserdata', async (req, res) => { 
     // i think i dont need this because its trying to get json data when its supposed to be retrieving from the database 
     // const { name, email } = req.body; 

@@ -1,5 +1,7 @@
 const dbConnection = require('./dbconnection'); // call the connection file here 
 
+//TODO: Drop existing table need to create a new one for Register users 
+
 // create a table as such 
 const createUsersTable = `
     CREATE TABLE IF NOT EXISTS users (
@@ -16,7 +18,9 @@ const createTasksTable = `
         user_id INT NOT NULL,
         task_text VARCHAR(255) NOT NULL
     );
-`;
+`; 
+
+// TODO: add register table for people who are interested in ORBI 
 
 // now we need to connect to the SQllite database and execute the create table query 
 async function CreateTables() { 

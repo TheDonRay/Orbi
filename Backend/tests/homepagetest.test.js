@@ -1,5 +1,5 @@
 //testing the homepage route here  
-//TODO: test the homepage route ensuring that it works correctly.
+
 const request = require('supertest'); 
 const app = require('../app.js');  
 
@@ -17,4 +17,7 @@ describe('writing test for the homepage route to make sure that data is shown', 
         concise email. Designed to save time and boost productivity, Orbi helps you 
         focus on what matters most—transforming inbox chaos into streamlined efficiency.`)
     }); 
-}); 
+});  
+
+
+//TODO: need to write tests for the userpage using mocking modules and mock functions

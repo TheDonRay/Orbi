@@ -47,7 +47,7 @@ void main() {
 `;
 
 export default function Iridescence({
-  color = [10, 6, 10],
+  color = [0.5, 0.7, 0.8],
   speed = 1.0,
   amplitude = 0.1,
   mouseReact = true,

@@ -1,5 +1,5 @@
 .homepage-container {
-    height: 31vh; /* Use 100vh to center on the full page height */
+    height: 45vh; /* Use 100vh to center on the full page height */
     display: flex;
     flex-direction: column;
     justify-content: center;

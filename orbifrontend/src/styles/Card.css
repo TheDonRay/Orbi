@@ -17,15 +17,18 @@
 }
 
 /* Base card styling */
-.card-container {
-  width: 350px;
-  min-height: 120px;
-  padding: 25px;
-  background-color: transparent;
-  color: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+.card-container { 
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border-radius: 20px;
+    width: 350px;
+    min-height: 120px;
+    padding: 25px;
+    color: white;
+    /* border-radius: 10px; */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 /* Hover effect */
@@ -40,11 +43,18 @@
   letter-spacing: -1px;
 }
 
-.orbi, .orbi2 {
-  color: black;
-}
+.orbi {
+  color: rgb(42, 215, 235);
+} 
 
-/* The following selectors are no longer needed, as Grid handles alignment: */
-/* .secondCard { margin-top: -120px; } */
-/* .side-by-side-cards { ... } */
-/* .side-by-side-cards .card-container { ... } */
+.orbi2{ 
+    color: rgb(42, 215, 235)
+} 
+
+.orbi3 { 
+    color: rgb(42, 215, 235); 
+} 
+
+.orbi4 { 
+    color: rgb(42, 215, 235); 
+}

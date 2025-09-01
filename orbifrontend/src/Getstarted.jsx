@@ -67,7 +67,10 @@ function Getstarted() {
         </div> 
 
         <div className="seconddivstyle">
-            
+             <Card className="secondcard">
+                <h3 className="text">Enter the day you'd like your <span className='namecolor'>email</span> sent <span className='emailcolor'>to you!</span></h3>
+                {/*TODO: Put calender component buiild here -> take the data destructure and send to backend called getTasks */}
+            </Card>
         </div> 
 
         </>

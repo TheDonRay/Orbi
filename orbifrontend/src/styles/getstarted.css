@@ -50,4 +50,10 @@
     color: black; 
 } 
 
-
+.seconddivstyle{ 
+    display: flex;
+    justify-content: center; /* This centers the cards in the middle of the container */
+    align-items: flex-start; /* Aligns items at the top of the container */
+    gap: 25px; /* Provides space between the cards */
+    margin-top: -200px; 
+}

@@ -1,0 +1,50 @@
+/* Container for the entire page */
+.learn-more-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: none;
+  padding: 60px 20px;
+}
+
+/* New CSS Grid container for the cards */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Creates two equal-width columns */
+  gap: 100px; /* Space between rows and columns */
+  margin-top: 60px; /* Space below the page title */
+}
+
+/* Base card styling */
+.card-container {
+  width: 350px;
+  min-height: 120px;
+  padding: 25px;
+  background-color: transparent;
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Hover effect */
+.card-container.hovered {
+  box-shadow: 0 0 25px rgba(252, 252, 252, 0.8), 0 0 50px rgba(255, 255, 255, 0.6);
+  transform: scale(1.05); /* Scales up slightly on hover */
+}
+
+/* Styling for the content */
+.card-content h2 {
+  margin-top: 0;
+  letter-spacing: -1px;
+}
+
+.orbi, .orbi2 {
+  color: black;
+}
+
+/* The following selectors are no longer needed, as Grid handles alignment: */
+/* .secondCard { margin-top: -120px; } */
+/* .side-by-side-cards { ... } */
+/* .side-by-side-cards .card-container { ... } */

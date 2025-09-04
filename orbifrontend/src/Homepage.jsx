@@ -1,65 +1,69 @@
 // this will be the homepage.
-// will import some backend data etc. 
-import './styles/homepage.css' 
-import { useNavigate } from "react-router"; 
-import './styles/homepagebtn.css'  
-import React, { useState, useEffect } from 'react'; 
-import './styles/cardhomepage.css'; 
+// will import some backend data etc.
+import "./styles/homepage.css";
+import { useNavigate } from "react-router";
+import "./styles/homepagebtn.css";
+import React, { useState, useEffect } from "react";
+import "./styles/cardhomepage.css";
 
+function HomePage() {
+  // initialize the useNavigate hook
+  const navigate = useNavigate();
+  const [data, setData] = useState(null); // right now this is assigned to not be null
 
+  useEffect(() => {
+    const fetchdata = async () => {
+      // this is our function which is asynchrnous
+      try {
+        const response = await fetch("http://localhost:8000/api/v1/home");
+        const result = await response.json();
+        console.log(result);
+        setData(result);
+      } catch (error) {
+        console.error("Error Retrieving Data", error);
+      }
+    };
+    // invoke the function as such
+    fetchdata();
+  }, []);
 
-function HomePage() {   
-    // initialize the useNavigate hook 
-    const navigate = useNavigate();  
-    const [data, setData] = useState(null); // right now this is assigned to not be null 
-    
-    useEffect (() => { 
-        const fetchdata = async () => { // this is our function which is asynchrnous
-            try { 
-                const response = await fetch('http://localhost:8000/api/v1/home'); 
-                const result = await response.json();   
-                console.log(result); 
-                setData(result);  
-                
-            } 
-            catch (error) { 
-                console.error('Error Retrieving Data', error); 
-            }
-        }; 
-        // invoke the function as such 
-        fetchdata(); 
-    }, []); 
-    
-    // The function that handles the navigation
-    function getStarted() { // For the buttons
-        navigate('/getstarted'); 
-    }  
+  // The function that handles the navigation
+  function getStarted() {
+    // For the buttons
+    navigate("/getstarted");
+  }
 
-    function learnMore() { // For the buttons
-        navigate('/learnmore'); 
-    }
+  function learnMore() {
+    // For the buttons
+    navigate("/learnmore");
+  }
 
-    return(
-        <div className="homepage-container">
-            <h1 className='home-page'>From deadlines to headlines — all in <span className="highlight-email">one Email.</span></h1> 
-            
-            {/* New container for the buttons */}
-            <div className="button-container">
-                <button className="get-started-btn" onClick={getStarted}>
-                    {data ? data.btntitle: "Loading..."}
-                </button> 
-                <button className="learnmore-btn" onClick={learnMore}>
-                    {data ? data.secondbtntitle: "Loading..."}
-                </button> 
-            </div>   
+  return (
+    <div className="homepage-container">
+      <h1 className="home-page">
+        From deadlines to headlines — all in{" "}
+        <span className="highlight-email">one Email.</span>
+      </h1>
 
-            <div className= "subtext"> 
-                <h3>
-                    Stay in your own orbit - <span className= "texthigh">O R B I</span> helps you filter out the noise and focus on the emails that truly matter.
-                </h3>
-            </div>
-        </div>
-    ); 
-} 
+      {/* New container for the buttons */}
+      <div className="button-container">
+        <button className="get-started-btn" onClick={getStarted}>
+          {data ? data.btntitle : "Loading..."}
+        </button>
+        <button className="learnmore-btn" onClick={learnMore}>
+          {data ? data.secondbtntitle : "Loading..."}
+        </button>
+      </div>
+
+      <div className="subtext">
+        <h3>
+          Stay in your own orbit - <span className="texthigh">O R B I</span>{" "}
+          helps you filter out the noise and focus on the emails that truly
+          matter.
+        </h3>
+      </div>
+    </div>
+  );
+}
 
 export default HomePage;

@@ -1,29 +1,29 @@
 /*Remember this file is responsible for handling email functionality in your Node.js project. 
 to run the node mail do node SMTPserver/mailer.js */
 
-// import the nodemailer library  
-// load the env variables from the env file using the dotenv package.  
-require('dotenv').config({path : './env/.env.smtp'}); // remember we need to define where that env file is. 
-const nodemailer = require('nodemailer');  
+// import the nodemailer library
+// load the env variables from the env file using the dotenv package.
+require("dotenv").config({ path: "./env/.env.smtp" }); // remember we need to define where that env file is.
+const nodemailer = require("nodemailer");
 //const users = process.env.USERS.split(',');
 
-// create the transporter object 
+// create the transporter object
 const transporter = nodemailer.createTransport({
-    service: 'gmail',  
-    auth: {  
-        user: process.env.GMAIL_USER,
-        pass: process.env.GMAIL_PASS
-    }
-});  
+  service: "gmail",
+  auth: {
+    user: process.env.GMAIL_USER,
+    pass: process.env.GMAIL_PASS,
+  },
+});
 
-// configure the mailoptions object  
+// configure the mailoptions object
 // the mai options allow you to send the details of the mail and how it is supposed to look
-const mailOptions = { // yes this is an object 
-    from: process.env.GMAIL_USER, 
-    to: 'rayatchowdhury2005@gmail.com', 
-    subject: 'No More Inbox Overload — Just Orbi.',
-    html: 
-    `<div style="
+const mailOptions = {
+  // yes this is an object
+  from: process.env.GMAIL_USER,
+  to: "rayatchowdhury2005@gmail.com",
+  subject: "No More Inbox Overload — Just Orbi.",
+  html: `<div style="
       background-color: #0d0d0d; 
       color: #e0e0e0; 
       font-family: 'Outfit', 'Arial', sans-serif; 
@@ -58,38 +58,37 @@ const mailOptions = { // yes this is an object
       ">
         Powered by Orbi — Stay in Orbit, Stay Ahead.
       </p>
-    </div>`, 
-    // attachments: [ // this is going to be an array to contain the attachments of any file type you / content you want to add
-    //     { 
-    //         filename: 'Orbi',
-    //         path: 'C:\\Users\\rayat\\OneDrive\\Desktop\\MyProjects\\Orbi\\public\\orbilogo.png'
-    //     }
-    // ]
-    
-};  
+    </div>`,
+  // attachments: [ // this is going to be an array to contain the attachments of any file type you / content you want to add
+  //     {
+  //         filename: 'Orbi',
+  //         path: 'C:\\Users\\rayat\\OneDrive\\Desktop\\MyProjects\\Orbi\\public\\orbilogo.png'
+  //     }
+  // ]
+};
 
 // send the email  \
-// note you should try wrapping this in a async / await function to make it more better remember async await requires async / await 
+// note you should try wrapping this in a async / await function to make it more better remember async await requires async / await
 
-async function sendmail() {  
-    try {
-        const response = await transporter.sendMail(mailOptions); 
-        console.log('Email was sent to user:', response);   
-    } catch (err) { 
-        console.log('Error sending email: ', err); 
-    }
-}; 
-// function invoke 
-sendmail(); 
+async function sendmail() {
+  try {
+    const response = await transporter.sendMail(mailOptions);
+    console.log("Email was sent to user:", response);
+  } catch (err) {
+    console.log("Error sending email: ", err);
+  }
+}
+// function invoke
+sendmail();
 
-// transporter.sendMail(mailOptions, function(error, info){ 
-//     try {  
+// transporter.sendMail(mailOptions, function(error, info){
+//     try {
 //         if (error) {
 //             throw error;
 //         }
-//         console.log('Email sent:', info.response); 
-//     } 
-//     catch (err) { 
-//         console.log('Error sending Email', err); 
+//         console.log('Email sent:', info.response);
+//     }
+//     catch (err) {
+//         console.log('Error sending Email', err);
 //     }
 // });

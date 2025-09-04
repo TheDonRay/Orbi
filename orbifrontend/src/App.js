@@ -1,24 +1,24 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import './styles/App.css';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import "./styles/App.css";
 
 // Import your page components
-import HomePage from './Homepage.jsx';
-import Register from './Register.jsx';
-import Navbar from './Navbar.jsx';
-import Getstarted from './Getstarted.jsx';
-import Learnmore from './Learnmore.jsx';
-import Iridescence from './Iridescence.jsx';
+import HomePage from "./Homepage.jsx";
+import Register from "./Register.jsx";
+import Navbar from "./Navbar.jsx";
+import Getstarted from "./Getstarted.jsx";
+import Learnmore from "./Learnmore.jsx";
+import Iridescence from "./Iridescence.jsx";
 
 function App() {
   return (
     <div className="app-container">
-      <Iridescence 
+      <Iridescence
         className="iridescence-container"
         color={[0.2, 0.5, 1]} // Updated color here
         mouseReact={false}
         amplitude={0.1}
-        speed={0.2}  
+        speed={0.2}
       />
 
       <div className="content">
@@ -26,7 +26,7 @@ function App() {
           <Navbar />
           <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="/about" element={<Register/>} />
+            <Route path="/about" element={<Register />} />
             <Route path="/getstarted" element={<Getstarted />} />
             <Route path="/learnmore" element={<Learnmore />} />
           </Routes>

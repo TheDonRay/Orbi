@@ -17,23 +17,27 @@
 }
 
 /* Base card styling */
-.card-container { 
-    background: rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(20px) saturate(180%);
-    -webkit-backdrop-filter: blur(20px) saturate(180%);
-    border-radius: 20px;
-    width: 350px;
-    min-height: 120px;
-    padding: 25px;
-    color: white;
-    /* border-radius: 10px; */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+.card-container {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-radius: 20px;
+  width: 350px;
+  min-height: 120px;
+  padding: 25px;
+  color: white;
+  /* border-radius: 10px; */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition:
+    transform 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out;
 }
 
 /* Hover effect */
 .card-container.hovered {
-  box-shadow: 0 0 25px rgba(252, 252, 252, 0.8), 0 0 50px rgba(255, 255, 255, 0.6);
+  box-shadow:
+    0 0 25px rgba(252, 252, 252, 0.8),
+    0 0 50px rgba(255, 255, 255, 0.6);
   transform: scale(1.05); /* Scales up slightly on hover */
 }
 
@@ -45,16 +49,16 @@
 
 .orbi {
   color: black;
-} 
+}
 
-.orbi2{ 
-    color: black; 
-} 
+.orbi2 {
+  color: black;
+}
 
-.orbi3 { 
-    color: black; 
-} 
+.orbi3 {
+  color: black;
+}
 
-.orbi4 { 
-    color: black; 
+.orbi4 {
+  color: black;
 }

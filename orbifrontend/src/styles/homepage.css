@@ -1,18 +1,17 @@
 .homepage-container {
-    /* Takes up the full available screen height */
-    height: 15vh; 
-    
-    /* Enables Flexbox */
-    display: flex;
-    
-    /* Centers children horizontally */
-    justify-content: center;
-    
-    /* Centers children vertically */
-    align-items: center;
+  /* Takes up the full available screen height */
+  height: 15vh;
+
+  /* Enables Flexbox */
+  display: flex;
+
+  /* Centers children horizontally */
+  justify-content: center;
+
+  /* Centers children vertically */
+  align-items: center;
 }
 
-.home-page {   
-    
-    color: white;  
+.home-page {
+  color: white;
 }

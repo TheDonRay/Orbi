@@ -1,21 +1,20 @@
-import { test, expect, describe } from '@playwright/test';
+import { test, expect, describe } from "@playwright/test";
 
-describe('Learning about writing tests in playwright', () => {
-
+describe("Learning about writing tests in playwright", () => {
   // This hook runs before each test to navigate to the correct URL.
   test.beforeEach(async ({ page }) => {
-    await page.goto('http://localhost:3000/');
+    await page.goto("http://localhost:3000/");
   });
 
   // Test 1: Verifies the homepage's title.
-  test('going to test if the website has the title', async ({ page }) => {
-    await expect(page).toHaveTitle(/O R B I/i);  
+  test("going to test if the website has the title", async ({ page }) => {
+    await expect(page).toHaveTitle(/O R B I/i);
 
     const getpageUrl = page.url(); // this gets the page url we are at.
-    console.log('Page URL is the following: ', getpageUrl);  
+    console.log("Page URL is the following: ", getpageUrl);
 
-    await expect(page).toHaveURL('http://localhost:3000/');  // we expect the assertion to have this URL. 
+    await expect(page).toHaveURL("http://localhost:3000/"); // we expect the assertion to have this URL.
 
-    await page.close(); // this will close the page 
+    await page.close(); // this will close the page
   });
 });

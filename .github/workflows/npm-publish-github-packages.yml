@@ -3,35 +3,34 @@
 name: Testing the backend
 
 on:
-  push: 
-    branches: 
-      - main 
+  push:
+    branches:
+      - main
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4 
+      - uses: actions/checkout@v4
 
       #set up Node
       - uses: actions/setup-node@v4
         with:
           node-version: 22.13.1
 
-      #install backend dependencies 
-      - name: Install dependencies 
-        run: npm ci  
-        working-directory: Backend 
+      #install backend dependencies
+      - name: Install dependencies
+        run: npm ci
+        working-directory: Backend
 
-      #Run backend Tests 
-      - name: Run tests 
-        run: npm test 
-        working-directory: Backend 
-        env: 
-          DB_HOST: ${{ secrets.DB_HOST }} 
+      #Run backend Tests
+      - name: Run tests
+        run: npm test
+        working-directory: Backend
+        env:
+          DB_HOST: ${{ secrets.DB_HOST }}
           DB_USER: ${{ secrets.DB_USER }}
           DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
-          
 
   publish-gpr:
     needs: build
@@ -40,18 +39,18 @@ jobs:
       contents: read
       packages: write
     steps:
-      - uses: actions/checkout@v4 
+      - uses: actions/checkout@v4
 
       #setup for publishing
       - uses: actions/setup-node@v4
         with:
           node-version: 22.13.1
           registry-url: https://npm.pkg.github.com/
-      - run: npm ci 
-        working-directory: Backend  
-      
-        #publish package 
-      - run: npm publish 
+      - run: npm ci
+        working-directory: Backend
+
+        #publish package
+      - run: npm publish
         working-directory: Backend
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}

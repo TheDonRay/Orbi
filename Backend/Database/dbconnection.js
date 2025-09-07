@@ -9,8 +9,9 @@ const pool = mysql.createPool({
   connectionLimit: 10, // represents the max number of conenctions in the pool
   host: process.env.DB_HOST,
   user: process.env.DB_USER,
-  password: process.env.DB_PASS,
-  database: "orbidb",
+  password: process.env.DB_PASS, 
+  port: process.env.DB_PORT,
+  database: process.env.DB_DATABASE
 });
 
 // wrap in a function as such to handle the async/await promise since we are suing mysql2/promise

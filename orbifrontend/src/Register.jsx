@@ -1,6 +1,12 @@
-// About Page
+import React from "react"; 
+
+
 function Register() {
-  return <h1>This is the About Page</h1>;
+  return ( 
+    <div className="registerHeading"> 
+      <h1>Want to hear more about O R B I? Get Updated daily by Signing up!</h1>
+    </div>
+  ); 
 }
 
 export default Register;

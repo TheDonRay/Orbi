@@ -11,8 +11,11 @@
 /* New CSS Grid container for the cards */
 .cards-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Creates two equal-width columns */
-  gap: 100px; /* Space between rows and columns */
+  grid-template-columns: repeat(
+    2,
+    1fr
+  ); /* auto-fit adjusts columns based on available width */
+  gap: 90px; /* Space between rows and columns */
   margin-top: 60px; /* Space below the page title */
 }
 
@@ -22,7 +25,8 @@
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
   border-radius: 20px;
-  width: 350px;
+  width: 100%;
+  max-width: 350px;
   min-height: 120px;
   padding: 25px;
   color: white;
@@ -61,4 +65,14 @@
 
 .orbi4 {
   color: black;
+}
+
+/* Media query example for smaller screens */
+@media screen and (max-width: 600px) {
+  .learn-more-page {
+    padding: 40px 10px;
+  }
+  .cards-grid {
+    gap: 20px;
+  }
 }

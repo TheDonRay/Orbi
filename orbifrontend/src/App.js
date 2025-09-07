@@ -6,7 +6,7 @@ import "./styles/App.css";
 import HomePage from "./Homepage.jsx";
 import Register from "./Register.jsx";
 import Navbar from "./Navbar.jsx";
-import Getstarted from "./Getstarted.jsx";
+import GetStarted from "./Getstarted.jsx";
 import Learnmore from "./Learnmore.jsx";
 import Iridescence from "./Iridescence.jsx";
 
@@ -27,7 +27,7 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<Register />} />
-            <Route path="/getstarted" element={<Getstarted />} />
+            <Route path="/getstarted" element={<GetStarted />} />
             <Route path="/learnmore" element={<Learnmore />} />
           </Routes>
         </Router>

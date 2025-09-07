@@ -21,7 +21,12 @@ const createTasksTable = `
 `;
 
 // TODO: add register table for people who are interested in ORBI
-
+const userRegisteredTable = ` 
+    CREATE TABLE IF NOT EXISTS register (
+    // add values here to implement
+    
+    )
+`
 // now we need to connect to the SQllite database and execute the create table query
 async function CreateTables() {
   try {

@@ -5,3 +5,6 @@ const RegisteredUsers = express.Router();
 
 //TODO: set up route to update db table to have this table.
 //TODO: set up get request just to make sure im able to see all the users.
+RegisteredUsers.post('/userinterested', (req, res) => {
+    //TODO implement the logic to get the user email from the form data into the backend route into a new database  
+})

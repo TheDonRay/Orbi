@@ -1,6 +1,7 @@
 const express = require("express");
 const userdata = express.Router();
-const connection = require("../Database/dbconnection");
+const connection = require("../Database/dbconnection"); 
+//TODO: form data of user name and email needs to be referenced into the post route from getstarted page
 
 // route to create new user
 userdata.post("/userdata", async (req, res) => {

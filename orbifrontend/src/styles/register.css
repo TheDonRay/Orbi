@@ -1,11 +1,8 @@
-.registerHeading{ 
-    justify-content: center; 
-    color: white; 
-    text-align: center;
+.registerHeading { 
+  
 } 
 
-.registerHeading h1 {
-  margin: 0;
-  font-size: 2rem;
-  font-weight: bold;
+.heading-text{ 
+  color: white;  
+  justify-content: center;
 }

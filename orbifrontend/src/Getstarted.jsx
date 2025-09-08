@@ -180,7 +180,8 @@ function GetStarted() {
           </div>
         </div>
       </div> 
-      <div className="userEntryinformation"> 
+      <div className="userEntryinformation">  
+        {/*Need to fix the resizing to be auto for the calendar stuff so that when users go on a certain screen they are able to resize automatic. */}
         <form> 
 
         </form>

@@ -6,8 +6,8 @@
   "scripts": {
     "test": "jest",
     "coverage": "jest --coverage",
-    "dev": "nodemon app.js",
-    "start": "node app.js"
+    "dev": "nodemon Server.js",
+    "start": "node Server.js"
   },
   "repository": {
     "type": "git",

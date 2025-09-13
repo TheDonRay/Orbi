@@ -1,5 +1,5 @@
-require("dotenv").config({ path: "./env/.env.dev" }); // using this instead of a config folder much more simpler where i just input the path to my env file.
-const app = require("./ExpressApp.js"); 
+require("dotenv").config({ path: "./env/.env.dev" }); // using this instead of a config folder much more simpler where i just input the path to my env file. In addition only importing it once. 
+const app = require("./ExpressApp.js"); // import the expressapp. 
 
 
 // PORT definition here.

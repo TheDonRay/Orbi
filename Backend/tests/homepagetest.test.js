@@ -1,7 +1,7 @@
 //testing the homepage route here
 
 const request = require("supertest");
-const app = require("../app.js");
+const app = require("../ExpressApp.js");
 
 describe("writing test for the homepage route to make sure that data is shown", () => {
   test("homepage route", async () => {

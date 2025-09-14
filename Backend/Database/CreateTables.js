@@ -27,6 +27,7 @@ const createTasksTable = `
     
 //     )
 // `
+
 // now we need to connect to the SQllite database and execute the create table query
 async function CreateTables() {
   try {

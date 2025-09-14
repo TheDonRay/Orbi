@@ -1,4 +1,9 @@
 /* getstarted.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+* {
+  font-family: 'Inter', sans-serif;
+}
 
 .calendar-container {
   display: flex;
@@ -14,15 +19,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .calendar-title {
   color: white;
-  font-size: 35px;
-  font-weight: bold;
+  font-size: 30px;
+  font-weight: 400; 
+  font-family: 'Inter', sans-serif;
   text-align: center;
-  margin: 0;
+  padding-top: 7px;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
@@ -33,7 +39,7 @@
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
   border: 1px solid rgba(255, 255, 255, 0.2);
   max-width: 400px;
-  width: 80%; 
+  width: 90%; 
 }
 
 /* Calendar Header */
@@ -52,6 +58,7 @@
   cursor: pointer;
   transition: all 0.3s ease;
   font-size: 1.5rem;
+  font-family: 'Inter', sans-serif;
   color: #374151;
   display: flex;
   align-items: center;
@@ -71,7 +78,8 @@
 
 .month-year {
   font-size: 1.5rem;
-  font-weight: 600;
+  font-weight: 600; 
+  font-family: 'Inter', sans-serif;
   color: #1f2937;
   margin: 0;
   text-align: center;
@@ -90,7 +98,8 @@
   text-align: center;
   padding: 0.75rem 0.5rem;
   font-size: 0.875rem;
-  font-weight: 600;
+  font-weight: 600; 
+  font-family: 'Inter', sans-serif;
   color: #6b7280;
   background-color: #f9fafb;
   border-radius: 8px;
@@ -113,7 +122,8 @@
   cursor: pointer;
   transition: all 0.2s ease;
   font-weight: 500;
-  font-size: 0.95rem;
+  font-size: 0.95rem; 
+  font-family: 'Inter', sans-serif;
   position: relative;
 }
 
@@ -125,7 +135,8 @@
 .calendar-day.today {
   background-color: #3b82f6;
   color: white;
-  font-weight: 700;
+  font-weight: 700; 
+  font-family: 'Inter', sans-serif;
   box-shadow: 0 4px 8px rgba(59, 130, 246, 0.3);
 }
 
@@ -133,6 +144,7 @@
   background-color: #10b981;
   color: white;
   font-weight: 700;
+  font-family: 'Inter', sans-serif;
   box-shadow: 0 4px 8px rgba(16, 185, 129, 0.3);
 }
 
@@ -159,12 +171,14 @@
   font-size: 0.875rem;
   color: #64748b;
   font-weight: 500;
+  font-family: 'Inter', sans-serif;
 }
 
 .selected-value {
   margin: 0;
   font-size: 1rem;
   font-weight: 600;
+  font-family: 'Inter', sans-serif;
   color: #1e293b;
 }
 
@@ -177,6 +191,7 @@
   border: none;
   border-radius: 12px;
   font-size: 1rem;
+  font-family: 'Inter', sans-serif;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;

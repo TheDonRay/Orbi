@@ -1,23 +1,61 @@
-.transparent-card {
-  background-color: transparent; /* semi-transparent white */
-  backdrop-filter: blur(8px); /* nice glassy blur effect */
-  border-radius: 16px;
-  /* border: 1px solid blue; */
-  margin-top: 2.5rem;
-  max-width: 530px;
-  color: white; /* assuming dark background */
-  box-shadow: transparent;
-  text-align: center;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap'); 
+
+*{ 
+  font-family: 'Inter', sans-serif;
 }
 
+.transparent-card {
+  background-color: transparent;
+  backdrop-filter: blur(8px);
+  border-radius: 16px;
+  margin-top: 2.5rem;
+  max-width: 530px;
+  color: white;
+  box-shadow: transparent;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Headings */
 .heading {
   font-weight: 700;
   font-size: 26px;
+  margin-bottom: 1rem;
 }
 
+/* Body text */
 .text {
   line-height: 1.6;
   font-weight: 600;
   font-size: 15px;
+}
+
+/* Input + Button */
+.input_wrap input {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  margin-bottom: 1rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+}
+
+.input_wrap button {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: none;
+  background-color: #3b82f6; /* nice blue */
+  color: white;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.input_wrap button:hover {
+  background-color: #2563eb; /* darker blue on hover */
 }

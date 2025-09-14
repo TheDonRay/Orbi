@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+*{ 
+  font-family: 'Inter', sans-serif;
+}
+
 .homepage-container {
   height: 53vh; /* Use 100vh to center on the full page height */
   display: flex;
@@ -10,13 +15,14 @@
 .home-page {
   color: white;
   text-align: center;
-  font-size: 40px;
+  font-size: 45px;
+  font-family: 'Inter', sans-serif;
 }
 
 .button-container {
   display: flex; /* Use flexbox to put buttons side-by-side */
-  gap: 1rem; /* Adjust space between buttons */
-  margin-top: 15px; /* Adjust space between h1 and buttons */
+  gap: 1.5rem; /* Adjust space between buttons */
+  margin-top: 40px; /* Adjust space between h1 and buttons */
 }
 
 .get-started-btn {
@@ -26,7 +32,8 @@
   border: none;
   border-radius: 50px;
   font-size: 1.1rem;
-  font-weight: 600;
+  font-weight: 400;
+  font-family: 'Inter', sans-serif;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -38,7 +45,8 @@
   border: 1px solid white; /* A white border */
   border-radius: 50px;
   font-size: 1.1rem;
-  font-weight: 600;
+  font-weight: 400;
+  font-family: 'Inter', sans-serif;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -53,12 +61,14 @@
 
 .highlight-email,
 .texthigh {
-  font-weight: bolder;
+  font-weight: 400;
   color: black;
 }
 
-.subtext {
-  font-weight: bolder;
+.subtext { 
+  font-family: 'Inter', sans-serif;
+  font-weight: normal; /* or 400 */
+  font-size: 17px;
   color: white;
-  margin-top: 1rem;
+  margin-top: 2.5rem;
 }

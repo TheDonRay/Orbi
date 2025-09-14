@@ -58,8 +58,8 @@ function HomePage() {
       <div className="subtext">
         <h3>
           Stay in your own orbit - <span className="texthigh">O R B I</span>{" "}
-          helps you filter out the noise and focus on the emails that truly
-          matter.
+          helps you filter out the noise and focus on the emails that truly <span className="mattertext">
+          matter.</span>
         </h3>
       </div>
     </div>

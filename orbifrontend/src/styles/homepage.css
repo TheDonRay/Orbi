@@ -1,17 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+* { 
+  font-family: 'Inter', sans-serif;
+}
 .homepage-container {
   /* Takes up the full available screen height */
   height: 15vh;
 
   /* Enables Flexbox */
-  display: flex;
+  display: flex; 
+  font-family: 'Inter', sans-serif;
 
   /* Centers children horizontally */
   justify-content: center;
 
   /* Centers children vertically */
-  align-items: center;
+  align-items: center; 
+  font-family: 'Inter', sans-serif;
 }
 
 .home-page {
   color: white;
+  font-family: 'Inter', sans-serif; 
+  font-weight: 400;
+}
+
+.mattertext { 
+  color: black; 
 }

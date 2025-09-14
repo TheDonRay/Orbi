@@ -24,7 +24,9 @@ function Learnmore() {
           <h2 className="firsttitle">
             What Makes <span className="orbi">O R B I ?</span>
           </h2>
-          <p>O R B I..</p>
+          <p className="ptext1">ORBI was born out of a personal challenge I faced every morning—waking up to an overwhelming stack of emails. The clutter made it difficult to prioritize what truly mattered, and I often found myself missing important messages in the rush of 
+            getting ready for work or class. This frustration inspired me to create a solution that organizes and highlights the most important emails first, making mornings more manageable and ensuring that nothing essential gets lost in the noise
+          </p>
         </Card>
         <Card>
           <h2 className="title">
